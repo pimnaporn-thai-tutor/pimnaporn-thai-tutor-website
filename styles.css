@@ -1,0 +1,600 @@
+:root {
+    --primary-dark: #0a0e27;
+    --secondary-dark: #1a1f3a;
+    --accent-dark-blue: #1e3a8a;
+    --accent-dark-green: #15803d;
+    --text-light: #f0f0f0;
+    --text-secondary: #b0b0b0;
+    --border-color: #2a3050;
+    --accent-gold: #d4af37;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--primary-dark);
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navigation */
+.navbar {
+    background-color: var(--secondary-dark);
+    border-bottom: 2px solid var(--accent-dark-blue);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--accent-gold);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--accent-gold);
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary-dark) 100%);
+    padding: 80px 20px;
+    border-bottom: 2px solid var(--accent-dark-green);
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: var(--text-light);
+    line-height: 1.2;
+}
+
+.hero .subtitle {
+    font-size: 24px;
+    color: var(--accent-gold);
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.hero .description {
+    font-size: 16px;
+    color: var(--text-secondary);
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+.cta-button {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--accent-dark-blue), var(--accent-dark-green));
+    color: white;
+    padding: 15px 40px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid var(--accent-gold);
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    border: 3px solid var(--accent-dark-green);
+}
+
+/* About Section */
+.about {
+    padding: 80px 20px;
+    background-color: var(--primary-dark);
+}
+
+.about h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    text-align: center;
+    color: var(--accent-gold);
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-content p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: var(--text-secondary);
+    line-height: 1.8;
+}
+
+.interests {
+    background-color: var(--secondary-dark);
+    padding: 30px;
+    border-radius: 5px;
+    margin-top: 30px;
+    border-left: 4px solid var(--accent-dark-green);
+}
+
+.interests h3 {
+    color: var(--accent-gold);
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.interests p {
+    color: var(--text-light);
+    margin: 0;
+}
+
+/* How Lessons Work Section */
+.how-lessons {
+    padding: 80px 20px;
+    background-color: var(--secondary-dark);
+    border-top: 2px solid var(--accent-dark-blue);
+    border-bottom: 2px solid var(--accent-dark-green);
+}
+
+.how-lessons h2 {
+    font-size: 36px;
+    margin-bottom: 50px;
+    text-align: center;
+    color: var(--accent-gold);
+}
+
+.lessons-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.lesson-card {
+    background-color: var(--primary-dark);
+    padding: 40px;
+    border-radius: 5px;
+    border: 2px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.lesson-card:hover {
+    border-color: var(--accent-gold);
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
+}
+
+.lesson-card h3 {
+    font-size: 22px;
+    color: var(--accent-dark-blue);
+    margin-bottom: 15px;
+}
+
+.lesson-card p {
+    color: var(--text-secondary);
+    line-height: 1.8;
+}
+
+.lesson-note {
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 15px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* What's Included Section */
+.whats-included {
+    padding: 80px 20px;
+    background-color: var(--primary-dark);
+}
+
+.whats-included h2 {
+    font-size: 36px;
+    margin-bottom: 50px;
+    text-align: center;
+    color: var(--accent-gold);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.feature {
+    background-color: var(--secondary-dark);
+    padding: 30px;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.feature:hover {
+    border-color: var(--accent-dark-green);
+    box-shadow: 0 10px 30px rgba(21, 128, 61, 0.2);
+}
+
+.feature-icon {
+    font-size: 40px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.feature h3 {
+    font-size: 18px;
+    color: var(--accent-gold);
+    margin-bottom: 10px;
+}
+
+.feature p {
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+/* Trial Lesson Section */
+.trial-lesson {
+    padding: 80px 20px;
+    background-color: var(--secondary-dark);
+    border-top: 2px solid var(--accent-dark-blue);
+    border-bottom: 2px solid var(--accent-dark-green);
+}
+
+.trial-lesson h2 {
+    font-size: 36px;
+    margin-bottom: 50px;
+    text-align: center;
+    color: var(--accent-gold);
+}
+
+.trial-steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.step {
+    background-color: var(--primary-dark);
+    padding: 40px;
+    border-radius: 5px;
+    text-align: center;
+    border: 2px solid var(--border-color);
+}
+
+.step-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--accent-dark-blue), var(--accent-dark-green));
+    color: white;
+    border-radius: 50%;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.step h3 {
+    font-size: 20px;
+    color: var(--accent-gold);
+    margin-bottom: 15px;
+}
+
+.step p {
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+.trial-note {
+    text-align: center;
+    font-size: 16px;
+    color: var(--accent-dark-green);
+    font-weight: 600;
+}
+
+/* Pricing Section */
+.pricing {
+    padding: 80px 20px;
+    background-color: var(--primary-dark);
+}
+
+.pricing h2 {
+    font-size: 36px;
+    margin-bottom: 50px;
+    text-align: center;
+    color: var(--accent-gold);
+}
+
+.pricing-card {
+    background-color: var(--secondary-dark);
+    padding: 50px;
+    border-radius: 5px;
+    border: 2px solid var(--accent-dark-blue);
+    max-width: 600px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+.pricing-card h3 {
+    font-size: 24px;
+    color: var(--text-light);
+    margin-bottom: 20px;
+}
+
+.price {
+    font-size: 18px;
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+}
+
+.amount {
+    font-size: 48px;
+    color: var(--accent-gold);
+    font-weight: 700;
+}
+
+.pricing-features {
+    list-style: none;
+    margin: 30px 0;
+    text-align: left;
+}
+
+.pricing-features li {
+    padding: 12px 0;
+    color: var(--text-secondary);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.pricing-features li:last-child {
+    border-bottom: none;
+}
+
+.booking-note {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: var(--primary-dark);
+    border-left: 4px solid var(--accent-gold);
+    color: var(--text-light);
+    font-size: 14px;
+}
+
+.trial-offer {
+    background: linear-gradient(135deg, var(--accent-dark-blue), var(--accent-dark-green));
+    padding: 40px;
+    border-radius: 5px;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    border: 2px solid var(--accent-gold);
+}
+
+.trial-offer h3 {
+    font-size: 24px;
+    color: var(--accent-gold);
+    margin-bottom: 15px;
+}
+
+.trial-offer p {
+    color: var(--text-light);
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 80px 20px;
+    background-color: var(--secondary-dark);
+    border-top: 2px solid var(--accent-dark-blue);
+    border-bottom: 2px solid var(--accent-dark-green);
+}
+
+.testimonials h2 {
+    font-size: 36px;
+    margin-bottom: 50px;
+    text-align: center;
+    color: var(--accent-gold);
+}
+
+.testimonial-card {
+    background-color: var(--primary-dark);
+    padding: 40px;
+    border-radius: 5px;
+    border: 2px solid var(--border-color);
+    max-width: 800px;
+    margin: 0 auto;
+    border-left: 4px solid var(--accent-dark-green);
+}
+
+.testimonial-text {
+    font-size: 16px;
+    color: var(--text-light);
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.testimonial-author {
+    text-align: right;
+    color: var(--accent-gold);
+    font-weight: 600;
+}
+
+/* Contact Section */
+.contact {
+    padding: 80px 20px;
+    background-color: var(--primary-dark);
+}
+
+.contact h2 {
+    font-size: 36px;
+    margin-bottom: 50px;
+    text-align: center;
+    color: var(--accent-gold);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.contact-method {
+    background-color: var(--secondary-dark);
+    padding: 30px;
+    border-radius: 5px;
+    border: 2px solid var(--border-color);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.contact-method:hover {
+    border-color: var(--accent-gold);
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
+}
+
+.contact-method h3 {
+    font-size: 18px;
+    color: var(--accent-gold);
+    margin-bottom: 15px;
+}
+
+.contact-method a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.contact-method a:hover {
+    color: var(--accent-gold);
+}
+
+.contact-method p {
+    color: var(--text-secondary);
+}
+
+.booking-info {
+    background-color: var(--secondary-dark);
+    padding: 30px;
+    border-radius: 5px;
+    border-left: 4px solid var(--accent-dark-green);
+    text-align: center;
+    color: var(--text-light);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--secondary-dark);
+    border-top: 2px solid var(--accent-dark-blue);
+    padding: 30px 20px;
+    text-align: center;
+    color: var(--text-secondary);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        gap: 15px;
+        flex-direction: column;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .hero-text h1 {
+        font-size: 36px;
+    }
+
+    .hero .subtitle {
+        font-size: 20px;
+    }
+
+    .lessons-grid,
+    .trial-steps,
+    .features-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        font-size: 12px;
+    }
+
+    .hero-text h1 {
+        font-size: 28px;
+    }
+
+    .hero .subtitle {
+        font-size: 18px;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+}
