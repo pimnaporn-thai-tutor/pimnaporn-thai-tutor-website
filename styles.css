@@ -211,9 +211,17 @@ body::before {
     max-width: 500px;
 }
 
+/* Hero buttons container */
+.hero-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
 .cta-button {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 8px;
     background: var(--accent-gold);
     color: var(--bg-base);
@@ -228,6 +236,7 @@ body::before {
     font-family: var(--font-body);
     position: relative;
     box-shadow: 0 4px 12px rgba(224, 177, 92, 0.2);
+    width: fit-content;
 }
 
 .cta-button:hover {
@@ -242,6 +251,18 @@ body::before {
     border-radius: 8px;
     background: radial-gradient(circle, rgba(110, 86, 207, 0.1), transparent);
     pointer-events: none;
+}
+
+.cta-button.secondary {
+    background: transparent;
+    color: var(--accent-gold);
+    border: 2px solid var(--accent-gold);
+    box-shadow: none;
+}
+
+.cta-button.secondary:hover {
+    background: rgba(224, 177, 92, 0.1);
+    box-shadow: 0 4px 12px rgba(224, 177, 92, 0.2);
 }
 
 .hero-image {
@@ -797,6 +818,10 @@ body::before {
         font-size: 18px;
     }
 
+    .hero-buttons {
+        flex-direction: column;
+    }
+
     .lessons-grid,
     .trial-steps,
     .features-grid,
@@ -831,6 +856,14 @@ body::before {
 
     .hero .subtitle {
         font-size: 16px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .cta-button {
+        width: 100% !important;
     }
 
     .features-grid {
